@@ -25,7 +25,7 @@ if (candidateAnswer === correctAnswer) {
 } else {
   console.log("Incorrect - Please check Chapter. 1");
 };
-
+// Look at my code - Hi hellllooooo!
 /*
 //Try 1
 candidateAnswer == correctAnswer;
