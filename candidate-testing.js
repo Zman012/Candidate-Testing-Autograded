@@ -3,11 +3,72 @@ const input = require('readline-sync');
 // TODO 2: modify your quiz app to ask 5 questions //
 
 // TODO 1.1a: Define candidateName // 
-let candidateName;
+let candidateName = input.question("Enter Your First name ");
+let candidateName1 = input.question("Enter Your Last name ");
+console.log("Greetings " + candidateName + " " + candidateName1);
+//Update to greeting First/Last
+
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
-let question;
-let correctAnswer;
-let candidateAnswer;
+let question = "Who was the first American woman in space? ";
+let correctAnswer = "Sally Ride";
+let candidateAnswer = "";
+
+candidateAnswer = input.question(question);
+// storing the user input into canddiate answer ).question is a part of the input of what you are asking)
+
+
+if (candidateAnswer === correctAnswer) {
+  console.log("Correct!");
+} else {
+  console.log("Incorrect - Please check Chapter. 1");
+};
+
+/*
+//Try 1
+candidateAnswer == correctAnswer;
+
+if (candidateAnswer === correctAnswer) {
+  console.log("Correct!");
+} else {
+  console.log("Incorrect - Please review Chapter 1 - History of US Women in space");
+}
+
+*/
+
+/*
+//Try 2
+if (question == correctAnswer) {
+  candidateAnswer == true;
+}
+if (candidateAnswer == "Sally Ride") {
+  console.log("Correct!")
+} else {
+  console.log("Incorrect - Please review Ch.1")
+}
+  */
+/*
+//Try 3
+if ( correctAnswer === "Sally Ride") {
+  candidateAnswer == true;
+};
+
+if (correctAnswer == true) {
+  console.log("Correct!")
+} else {
+  console.log("Incorrect - Please review Chapter 1 - History of US Women in space");
+};
+*/
+
+
+/*
+Try 4
+if (candidateAnswer == true) {
+  console.log("Correct!");
+} else {
+  console.log("Incorrect - Please review Chapter 1 - History of US Women in space");
+}
+
+*/
 
 
 //TODO: Variables for Part 2
