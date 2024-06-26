@@ -79,6 +79,15 @@ let questions;
 let correctAnswers;
 let candidateAnswers;
 
+/* let quetions = [
+"",
+"",
+]]
+*/
+
+//compare....think conditional
+//calculate as a percentage - use opertaors - 
+//convey 
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //

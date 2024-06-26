@@ -13,16 +13,16 @@ let question = "Who was the first American woman in space? ";
 let correctAnswer = "Sally Ride";
 let candidateAnswer = "";
 
-candidateAnswer = input.question(question);
+//candidateAnswer = input.question(question);
 // storing the user input into canddiate answer ).question is a part of the input of what you are asking)
 
-
+/*
 if (candidateAnswer === correctAnswer) {
   console.log("Correct!");
 } else {
   console.log("Incorrect - Please check Chapter. 1");
 };
-
+*/
 /*
 //Try 1
 candidateAnswer == correctAnswer;
@@ -72,21 +72,48 @@ if (candidateAnswer == true) {
 
 
 //TODO: Variables for Part 2
-let questions;
-let correctAnswers;
-let candidateAnswers;
+let questions = [
+  "Who was the first American woman in space?",
+    "True or false: 5 kilometer == 5000 meters?",
+    "(5 + 3)/2 * 10 = ?",
+    "Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2?",
+    "What is the minimum crew size for the ISS?"
+];
+
+
+let correctAnswers;[
+  "Sally Ride", 
+  "true",
+  "40",
+  "Trajectory",
+  "3"
+];
+
+let candidateAnswers = "";
 
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
-
+  let firstName = input.question("Enter Your First name: ");
+  let lastName = input.question("Enter Your Last name: ");
+  candidateName = firstName + " " + lastName;
+  console.log("Greetings " + candidateName);
 }
 
 function askQuestion() {
-  // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-
-
+  // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer /
+for ( let i = 0; i < questions.length; i ++) {
+  let answer = input.question(questions[i]);
+  //---
+  candidateAnswers.push(answer);
+  console.log(questions);
+//console.log(answer); why can't i print and see what I see
+//console.log(questions[i]); 
+// question - is their a better way than following the for numMeals from studio example?
 }
+//return questions - why does this not return?
+}
+
 
 function gradeQuiz(candidateAnswers) {
 
