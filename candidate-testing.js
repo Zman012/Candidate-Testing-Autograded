@@ -49,8 +49,7 @@ for (i = 0; i < questions.length; i++) {
   answers = input.question(`${i+1}) ${questions[i]}`);
   candidateAnswers.push(answers);
 }
-return askQuestion
-} //askQuestion();
+} 
 
 function gradeQuiz(candidateAnswers) {
 
@@ -62,7 +61,7 @@ function gradeQuiz(candidateAnswers) {
       numCorrect++;
     }
     console.log(`\n${i+1}) ${questions[i]}`);
-    console.log(`Your Answer: ${candidateAnswers}`);
+    console.log(`Your Answer: ${candidateAnswers[i]}`);
     console.log(`Correct Answer: ${correctAnswers[i]}\n`);
 
     
@@ -88,7 +87,7 @@ function runProgram() {
    console.log(`Greetings ${candidateName}`);
   askQuestion();
   gradeQuiz(this.candidateAnswers);
-} runProgram();
+} 
 
 // ----------- Don't write any code or change any code below this line ---------- //
 module.exports = {
