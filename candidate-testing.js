@@ -15,30 +15,30 @@ let candidateAnswer = '';
 //TODO: Variables for Part 2
 
 let questions = [
-["Who was the first American woman in space? "],
-["True or false: 5 kilometer == 5000 meters? "],
-["(5 + 3)/2 * 10 = ? "],
-["Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2? "],
-["What is the minimum crew size for the ISS? "]
+"Who was the first American woman in space? ",
+"True or false: 5 kilometer == 5000 meters? ",
+"(5 + 3)/2 * 10 = ? ",
+"Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2? ",
+"What is the minimum crew size for the ISS? "
 ];
 
 
 let correctAnswers = [
-  ['Sally Ride'],
-  ['true'],
-  ['40'],
-  ['Trajectory'],
-  ['3'],
+  "Sally Ride",
+  "true",
+  "40",
+  "Trajectory",
+  "3",
 ];
 
-let candidateAnswers = [[]];
+let candidateAnswers = [];
+
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
 
 candidateName = input.question("Please enter your name: ");
 
-return askForName 
 
 } 
 
@@ -57,28 +57,26 @@ return askQuestion
 
 
 function gradeQuiz(candidateAnswers) {
+
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-  //submit message to submit a correct / incorect anaswer
-  //dont mix arrays & strings for comparison 
+ 
   let numCorrect = 0;
+  let answers = [];
+  for (let i = 0; i < questions.length; i++) {
+    console.log(`\n${i+1}) ${questions[i]}`);
+    console.log(`Your Answer: ${candidateAnswers}`);
+    console.log(`Correct Answer: ${correctAnswers[i]}\n`);
 
-
-  for (i = 0; i < correctAnswers; i ++) {
-     numCorrect ++;
-     //for (let j = )
-    if (candidateAnswers === correctAnswers) { 
-      numCorrect ++;
-      console.log(`Question ${i + 1}: Correct!`);
-    } else {
-      console.log(`Question${i + 1}: Incorrect.`);
+    if (candidateAnswers === correctAnswers[i].toLowerCase()) {
+      numCorrect++;
     }
-  }
-
-  let grade;  //TODO 3.2 use this variable to calculate the candidates score.
-
-
+  } 
+    
+let grade;
   return grade;
 }
+
+
 
 function runProgram() {
   askForName();
