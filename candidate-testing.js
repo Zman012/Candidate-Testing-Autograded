@@ -46,7 +46,7 @@ function askQuestion() {
   //let answers = [];
 
 for (i = 0; i < questions.length; i++) {
-  answers = input.question(`${i+1}) ${questions[i]}`);
+  answers = input.question(`${questions[i]}`);
   candidateAnswers.push(answers);
 }
 } 
@@ -56,11 +56,14 @@ function gradeQuiz(candidateAnswers) {
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
  
   let numCorrect = 0;
+
+  console.log(`\nCandidate Name: ${candidateName}`)
+  
   for (let i = 0; i < questions.length; i++) {
     if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
       numCorrect++;
     }
-    console.log(`\n${i+1}) ${questions[i]}`);
+    console.log(`${i+1}) ${questions[i]}`);
     console.log(`Your Answer: ${candidateAnswers[i]}`);
     console.log(`Correct Answer: ${correctAnswers[i]}\n`);
 
